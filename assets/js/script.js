@@ -34,12 +34,20 @@ console.log(`Questo array contiene ${lotrComp.length} elementi`)
 
 //crea una funzione all'interno della quale utilizzerai i valori numerici tratti da un array
 let grades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let randomGrades = grades[Math.floor(Math.random()* 10)]
-console.log(`Il tuo voto è ${randomGrades}`)
+
+function evenOdd (){
+    let randomGrades = grades[Math.floor(Math.random()* 10)]
+    console.log(`Il tuo voto è ${randomGrades}`)
+    if (randomGrades == grades[0] || randomGrades == grades[2] || randomGrades == grades[4] || randomGrades == grades[6] || randomGrades == grades[8]){
+        document.getElementById('evenOdd').innerHTML = `Il numero ${randomGrades} è dispari.`
+    }
+    else {
+        document.getElementById('evenOdd').innerHTML = `Il numero ${randomGrades} è pari.`
+    }
+}
 
 // metodi push/pop e shift/unshift
 let listaSpesa = ['latte', 'uova', 'burro']
-console.log(listaSpesa)
 
 // con push e pop aggiungo o elimino l'ultimo elemento dell'array
 console.log(`La mia lista è ${listaSpesa}`)
